@@ -1,0 +1,62 @@
+---
+title: "Data analyses on annual findings of finances from 12 US states (Urban and Rural) during the stock market crash from 2008 to 2010"
+output: html_notebook
+---
+# Install and load packages
+  
+```{r}
+# Install using install.package function and library function
+
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+# Used three data sets from CORGIS Dataset which have been transposed, combined, and transformed in excel for R purposes using read.csv()
+
+```{r}
+#read csv file
+
+state_finances <- read.csv("../Project PROPEL/state_finances.csv")
+```
+
+* Note: only subset the following states: NY, CA, IL, TX, AZ, and PA & ME, VT, WV, MS, MT, and AR. These two groups will represent rural and urban states, which were chosen based on high number of population.
+
+# Subset data from master dataset in CSV file
+
+```{r}
+# subset rows of states using filter function and subset columns using select function
+
+states <- state_finances %>%
+  filter(States %in% c("NEW YORK","CALIFORNIA", "ILLINOIS", "TEXAS", "ARIZONA", "PENNSYLVANIA", "MAINE", "VERMONT", "WEST VIRGINIA", "MISSISSIPPI", "MINNESOTA", "ARKANSAS")) %>%
+  select(c("States", "Year", "Total.revenue", "Total.expenditure", "Taxes", "Debt.at.end.of.fiscal.year"))
+```
+
+# Create a side-by-side bar chart using ggplot
+
+```{r}
+# Create ggplot with the y-value of Total revenue
+
+ggplot(states, aes(x=States, y=Total.revenue))+
+  geom_bar(stat='identity', fill="forest green")+
+  ylab("Total revenue") 
+
+# Now, create another ggplot with the y-value of Total expenditure
+ggplot(states, aes(x=States, y=Total.expenditure))+
+  geom_bar(stat='identity', fill="forest green")+
+  ylab("Total expenditure")
+
+# Plot both two variables, Total.revenue and Total.expenditure
+
+states_plot <- gather(states, key="measure", value="value", c("Total.revenue", "Total.expenditure"))
+
+ggplot(states_plot, aes(x=States, y=value))+
+  geom_bar(stat='identity', fill="forest green")+
+  facet_wrap(~measure, ncol = 1) +
+  labs(title = "Total Revenue and Expenditure across 12 US Urban and Rural States in 2008 stock market crash", x = "States", y = "Dollars in million")
+```
+
+# Plot a line graph
+
+```{r}
+
+```
