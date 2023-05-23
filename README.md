@@ -1,4 +1,4 @@
-"Hello World!"" We are Isabel and Daniza. 
+"Hello World!" We are Isabel and Daniza. 
 
 Primary question: What is the Revenue deficit(the difference(subtracted) of total revenue and total expenditure) for the U.S. urban and rural states during the stock market crash from 2008 and 2010 and the their debt at the end of the fiscal year?
 
