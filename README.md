@@ -22,9 +22,9 @@ How we chose to subset 12 urban and rural US states (based on highest number of 
  
  Understanding national debt/debt at end of fiscal year: https://fiscaldata.treasury.gov/americas-finance-guide/national-debt/
  
- Access to data visualizations:
+ Access to data visualizations generated in R:
   1) Revenue deficit in 12 urban and rural states during the stock market crash from 2008 to 2010: https://rpubs.com/danizad/stockmarketcrash08
-  2) Debt at the end of the fiscal year for 12 urban and rural states during the stock market crash from 2008 to 2010: 
+  2) Debt at the end of the fiscal year for 12 urban and rural states during the stock market crash from 2008 to 2010: https://rpubs.com/danizad/stockmarketcrashdebt
  
  *NOTE* 
  
