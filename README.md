@@ -12,6 +12,7 @@ The data shows revenue deficit for all urban and rural States from 2008 to 2010,
 
 Resources:
 Three raw data sets: https://corgis-edu.github.io/corgis/blockpy/finance/
+
 How we chose to subset 12 urban and rural US states (based on highest number of population): 
   1) Rural: https://www.nationalpopularvote.com/rural-states-are-almost-entirely-ignored-under-current-state-state-system 
   2) Urban: https://www.newgeography.com/content/005187-america-s-most-urban-states 
