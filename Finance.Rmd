@@ -1,0 +1,78 @@
+---
+title: "Data analyses on annual findings of finances from 12 US states (Urban and Rural) during the stock market crash from 2008 to 2010"
+output: html_notebook
+---
+# Install and load packages
+  
+```{r}
+# Install using install.package function and library function
+
+install.packages("tidyverse")
+install.packages("plyr")
+library(tidyverse)
+library(dplyr)
+```
+
+# Used three data sets from CORGIS Dataset which have been transposed, combined, and transformed in excel for R purposes using read.csv()
+
+```{r}
+#read csv file
+
+state_finances <- read.csv("C:/Users/daniz/Downloads/PBLab/Biostatistics/Project PROPEL/stockmarketcrash08/processed data/state_finances.csv")
+```
+
+* Note: only subset the following states: NY, CA, IL, TX, AZ, and PA & ME, VT, WV, MS, MT, and AR. These two groups will represent rural and urban states, which were chosen based on high number of population.
+
+# Subset data from master dataset in CSV file
+
+```{r}
+# subset rows of states using filter function and subset columns using select function for finding the difference from Total revenue and Total expenditure.
+
+states <- state_finances %>%
+  filter(States %in% c("NEW YORK","CALIFORNIA", "ILLINOIS", "TEXAS", "ARIZONA", "PENNSYLVANIA", "MAINE", "VERMONT", "WEST VIRGINIA", "MISSISSIPPI", "MINNESOTA", "ARKANSAS")) %>%
+  select(c("States", "Year", "Total.revenue", "Total.expenditure", "Debt.at.end.of.fiscal.year"))
+```
+
+# Create bar plot using ggplot
+
+*Note: Hypothesis: US Urban states are more greatly affected than rural states by the stock market crash from 2008 to 2010 due do their dependence on the federal government on economic growth and development.
+
+# Find the difference between Total revenue and Total expenditure
+```{r}
+# extract Total.revenue and Total.expenditure column
+
+Total_revenue_col = states$Total.revenue
+Total_expenditure_col = states$Total.expenditure
+
+# Find the difference between Total revenue and Total expenditure. So, subtract Total expenditure from Total revenue for each state.
+
+Total_revenue_col-Total_expenditure_col
+
+# Create a data frame from the difference and rename column to "Revenue deficit"
+
+states_diff <- as.data.frame(Total_revenue_col-Total_expenditure_col) 
+colnames(states_diff)[colnames(states_diff) == "Total_revenue_col - Total_expenditure_col"] <- "Revenue.deficit"
+
+# Combine two data sets: states and states_diff
+states_rev_def <- bind_cols(states, states_diff)
+```
+
+# Plot Revenue Deficit
+```{r}
+# Create ggplot States vs Revenue deficit
+ggplot(states_rev_def, aes(x = States, y = Revenue.deficit))+
+  geom_bar(stat='identity', fill="forest green")+
+  facet_wrap(~Year, ncol = 1) +
+  labs(title = "Revenue Deficit across 12 US Urban and Rural States in 2008-2010 stock market crash", x = "States", y = "Revenue Deficit")
+```
+
+# Plot Debt at end of fiscal year 
+
+```{r}
+# Create ggplot States vs Debt at end of fiscal year
+ggplot(states, aes(x=States, y = Debt.at.end.of.fiscal.year)) +
+  geom_bar(stat='identity', fill=" red ")+
+  labs(title = "2008 Debt at end of fiscal year")
+  ylab("Debt at end of Fiscal Year")
+
+```
