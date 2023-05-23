@@ -20,6 +20,8 @@ How we chose to subset 12 urban and rural US states (based on highest number of 
  
  Finding the Revenue deficit: https://www.business-standard.com/about/what-is-revenue-deficit
  
+ Understanding national debt/debt at end of fiscal year: https://fiscaldata.treasury.gov/americas-finance-guide/national-debt/
+ 
  *NOTE* 
  
  If you plant to run the code, do not forget to change your file path. You can set your working directory to the folder where the CSV file is located and insert "/state_finances.csv". For example: 
