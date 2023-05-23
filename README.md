@@ -11,6 +11,7 @@ We decided to only focus on 12 urban and rural states based on their highest num
 The data shows revenue deficit for all urban and rural States from 2008 to 2010, to investigate the financial loss or how much government spending(expenditure) exceeded its revenue during the stock market crash. So, if a state government has a significant revenue deficit, then it means that their income/revenue is not sufficient to cover its basic services. We can see that urban states are greatly more affected than the rural states because urban states are economically developed than rural states and are more likely to encounter financial loss. Then, another data shows the debt at end of fiscal year to show how much the state governments owe during 2008-2010. It displays the total amount of outstanding borrowing by the state government during the stock market crash.
 
 Resources:
+
 Three raw data sets: https://corgis-edu.github.io/corgis/blockpy/finance/
 
 How we chose to subset 12 urban and rural US states (based on highest number of population): 
