@@ -19,3 +19,10 @@ How we chose to subset 12 urban and rural US states (based on highest number of 
   2) Urban: https://www.newgeography.com/content/005187-america-s-most-urban-states 
  
  Finding the Revenue deficit: https://www.business-standard.com/about/what-is-revenue-deficit
+ 
+ *NOTE* 
+ 
+ If you plant to run the code, do not forget to change your file path. You can set your working directory to the folder where the CSV file is located and insert /state_finances.csv. For example: 
+ 
+ Windows: "C:/Users/daniz/Downloads/PBLab/Biostatistics/Project PROPEL/stockmarketcrash08/processed data/state_finances.csv" shorten version but set working directory to the folder Biostatistics: "../Project PROPEL/stockmarketcrash08/processed data/state_finances.csv"
+ Mac: /Downloads/state_finances.csv or set working directory to the folder where the file is. On the console section in R, copy file path and insert "/state_finances.csv"
