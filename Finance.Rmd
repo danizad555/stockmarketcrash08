@@ -73,7 +73,6 @@ ggplot(states_rev_def, aes(x = States, y = Revenue.deficit))+
 ggplot(states, aes(x=States, y = Debt.at.end.of.fiscal.year)) +
   geom_bar(stat='identity', fill=" red ")+
   facet_wrap(~Year, ncol = 1) +
-  labs(title = "2008 Debt at end of fiscal year")+
+  labs(title = "Debt at the end of fiscal year for 12 urban and rural states during the stock market crash from 2008 to 2010")+
   ylab("Debt at end of Fiscal Year")
-
 ```
