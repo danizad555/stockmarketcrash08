@@ -26,12 +26,12 @@ How we chose to subset 12 urban and rural US states (based on highest number of 
   1) Revenue deficit in 12 urban and rural states during the stock market crash from 2008 to 2010: https://rpubs.com/danizad/stockmarketcrash08
   2) Debt at the end of the fiscal year for 12 urban and rural states during the stock market crash from 2008 to 2010: https://rpubs.com/danizad/stockmarketcrashdebt
 
-Video presentation link: 
+Video presentation link: https://www.youtube.com/watch?v=B-yvUGVXanE&t=11s
  
  *NOTE* 
  
  If you plant to run the code, do not forget to change your file path. You can set your working directory to the folder where the CSV file is located and insert "/state_finances.csv". For example: 
  
- Windows: "C:/Users/daniz/Downloads/PBLab/Biostatistics/Project PROPEL/stockmarketcrash08/processed data/state_finances.csv" shorten version but first set working directory to the folder Biostatistics: "../Project PROPEL/stockmarketcrash08/processed data/state_finances.csv"
+ Windows: "C:/Users/daniz/Downloads/PBLab/Biostatistics/Project PROPEL/stockmarketcrash08/processed data/state_finances.csv" shorten version but first set working directory to the folder stockmarketcrash08: "../stockmarketcrash08/processed data/state_finances.csv"
  
  Mac: /Downloads/state_finances.csv or set working directory to the folder where the file is. On the console section in R, copy file path and insert "/state_finances.csv"
